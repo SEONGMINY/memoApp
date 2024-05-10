@@ -10,3 +10,8 @@ export const createTableMemosQuery = `
 )`;
 
 export const dropTableMemosQuery = 'DROP TABLE IF EXISTS Memos';
+
+export const insertMemoQuery =
+  'INSERT INTO Memos (title, content, createdAt, categoryId) VALUES (?, ?, ?, ?)';
+
+export const selectMemoFromCategoryQuery = 'SELECT * FROM Memos WHERE categoryId = ?';
